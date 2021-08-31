@@ -1,0 +1,53 @@
+a supprimer
+INGENICO TEST
+PROGECARTE
+AMAZON ES
+AMAZON FR
+AMAZON IT
+AMAZON POC EURO
+AmazonPay UK POC
+Axis - Cartes 2010
+Axis - Vivaticket
+Axis-Orange
+Axis-QuickSilver France
+Axis-Selecta
+BETA TEST
+BETA TEST HORS CSC
+BNPP
+BPOC
+Capmonetique Sandbox
+CAPSYS Sandbox
+Casino - Démo Backup autonome
+CMCIC
+CustomerMAT1212
+DEMO
+DEMO MEA
+DEMO_Team
+France INTEGRATION
+HM Telecom - EIRL Gosselin (compte clôturé)
+HM Telecom - Printer Parts Fixing
+Ingenico Iberia
+IngenicoItaly
+IngenicoTNG
+ITBS
+LaBanquePostale
+Lasersoft
+Lottomatica
+MAT20190129
+MKTG-DEMO
+Money2020-Amazon
+MSC Cruises
+Natixis SandBox
+OPS_Team
+Payzone UK
+PLANET_PAYMENT
+Progecarte
+sandbox-ingenico
+Satin - ClientTest
+Satin PI1411G00265
+Sim_Axis_Support
+Tepeo
+test
+TR_TEST
+UNICAJA BANCO
+Unicredit Bank Hungary
