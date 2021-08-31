@@ -1,0 +1,17 @@
+[14:28] Sylvain QUACK
+    J'ai modifié pour que l'on voit directement dans la factu globale s'il y a des sims directement sous le grossiste
+[correspPayViewPassPort.xlsx] (https://ingenicogroup-my.sharepoint.com/personal/sylvain_quack_ingenico_com/Documents/Fichiers de conversation Microsoft Teams/correspPayViewPassPort.xlsx)​[14:28] Sylvain QUACK
+    par ex 2 sims rattachées à HM pas à un sous client
+
+
+​[14:29] Sylvain QUACK
+    voici
+[FACTU_LAURE.zip] (https://ingenicogroup-my.sharepoint.com/personal/sylvain_quack_ingenico_com/Documents/Fichiers de conversation Microsoft Teams/FACTU_LAURE.zip)​[14:30] Sylvain QUACK
+    cela génère aussi un fichier "clientsRienAFacturer.txt" dans le dossier généré par la factu
+​[15:51] Laure BROEGG
+    Merci Sylvain (j'etais en réunion quand tu as envoyé les fichiers)
+​[15:54] Laure BROEGG
+    j'ai regardé les SIM de pret dans les fichiers de facturation de novembre et qqch m'intrigue.
+Payview sort des SIMs pour rev test (chez AVT), société BTI et Inosys (chez HM) et Satin Test chez Satin mais il n'y a pas de fichier detail pour ces clients
+
+je vais lancer ton nouveau script et verifier si ca se produit encore, je te tiens informé
