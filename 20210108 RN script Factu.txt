@@ -1,0 +1,3 @@
+[Hier 15:54] Sylvain QUACK
+    Mise à jour pour tenir compte des clients ignorés lors de la récup de PayView aussi
+[FACTU_LAURE.zip] (https://ingenicogroup-my.sharepoint.com/personal/sylvain_quack_ingenico_com/Documents/Fichiers de conversation Microsoft Teams/FACTU_LAURE.zip)
