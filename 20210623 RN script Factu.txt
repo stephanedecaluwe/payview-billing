@@ -1,0 +1,82 @@
+*********************** 20210623 ***********************
+Suppression de la date et l'heure de génération en prefixe de tous les fichiers
+Ajout de tailles de forfait
+Laure
+*********************** 20210212 ***********************
+j'ai revu le script de factu pour trier les résultats par Bu, d'abord RBU, puis TSS
+j'ai fait aussi une modif pour que la liste ignorée soit ignorée en case insensitive et à la fois sur payview et passport
+ajout de colonnes nbSimsPassPort, nbSimsO2, nbSimsBouygues, nbTpesPassPort (ca va aider pour la quantité de SIMs a migrer
+et pour les TPE, pareil, ce sont ceux qui se connectent sur 47150 et 47151)
+
+j'ai une question à propos de Progecarte
+dans le fichier correspondance, tu as associé Progecarte (PayView) à PGC (Passport) or il n'y a pas de PGC dans Passport
+et dans le fichier des clients a supprimer, tu as mis Progecarte, donc ca supprime les données de progecarte de Passport
+c'est volontaire?
+> non, tu peux enlever PGC des clients à ignorer
+Sylvain
+*********************** 20210205 ***********************
+cette version prend bien en compte les clients à ne pas afficher dans le tableau
+Attention, reflechir pour PGC
+
+prend en compte les nouveaux clients de PayView
+
+j'ai fait une correction sur le nb TPEs facturés qui n'était pas bon dans l'onglet détail)
+sur le total des grossistes, ce n'est pas un bug, je vais t'expliquer après
+au niveau du grossite:
+nb TPEs facturés = somme TPEs actifs ss clients - somme SIMs facturés ss clients
+    par ex, SATIN direct a 69 TPEs et 0 sims
+    mais SATIN a 18 SIMs et 0 Tpes
+    Satin Test a une sim, 0 tpe
+    du coup SATIN grossite: 69 TPEs actifs - (18+1) sims actives = 50 TPEs facturés
+Sylvain
+*********************** 20210108 ***********************
+[Hier 15:54] Sylvain QUACK
+    Mise à jour pour tenir compte des clients ignorés lors de la récup de PayView aussi
+[FACTU_LAURE.zip] (https://ingenicogroup-my.sharepoint.com/personal/sylvain_quack_ingenico_com/Documents/Fichiers de conversation Microsoft Teams/FACTU_LAURE.zip)
+
+*********************** 20210105 ***********************
+[14:28] Sylvain QUACK
+    J'ai modifié pour que l'on voit directement dans la factu globale s'il y a des sims directement sous le grossiste
+[correspPayViewPassPort.xlsx] (https://ingenicogroup-my.sharepoint.com/personal/sylvain_quack_ingenico_com/Documents/Fichiers de conversation Microsoft Teams/correspPayViewPassPort.xlsx)​[14:28] Sylvain QUACK
+    par ex 2 sims rattachées à HM pas à un sous client
+
+
+​[14:29] Sylvain QUACK
+    voici
+[FACTU_LAURE.zip] (https://ingenicogroup-my.sharepoint.com/personal/sylvain_quack_ingenico_com/Documents/Fichiers de conversation Microsoft Teams/FACTU_LAURE.zip)​[14:30] Sylvain QUACK
+    cela génère aussi un fichier "clientsRienAFacturer.txt" dans le dossier généré par la factu
+​[15:51] Laure BROEGG
+    Merci Sylvain (j'etais en réunion quand tu as envoyé les fichiers)
+​[15:54] Laure BROEGG
+    j'ai regardé les SIM de pret dans les fichiers de facturation de novembre et qqch m'intrigue.
+Payview sort des SIMs pour rev test (chez AVT), société BTI et Inosys (chez HM) et Satin Test chez Satin mais il n'y a pas de fichier detail pour ces clients
+
+je vais lancer ton nouveau script et verifier si ca se produit encore, je te tiens informé
+
+*********************** 20210105 ***********************
+
+[11:49] Sylvain QUACK
+    salut Laure
+​[11:49] Laure BROEGG
+    Bonjour Sylvain
+[11:50] Sylvain QUACK
+    voici la mise à jour du script pour vérifier au début que tous les clients PayView sont dans correspondance ou propose de les ajouter
+[FACTU_LAURE.zip] (https://ingenicogroup-my.sharepoint.com/personal/sylvain_quack_ingenico_com/Documents/Fichiers de conversation Microsoft Teams/FACTU_LAURE.zip)​[11:50] Sylvain QUACK
+    Mise à jour de ce fichier
+[correspPayViewPassPort.xlsx] (https://ingenicogroup-my.sharepoint.com/personal/sylvain_quack_ingenico_com/Documents/Fichiers de conversation Microsoft Teams/correspPayViewPassPort.xlsx)​[11:50] Sylvain QUACK
+    si client non grossiste, si la sim est au nom du commerçant, utilise le nom du client d'ingenico à la place
+​[11:51] Sylvain QUACK
+    corrige le pb sim HOPITAL...
+​[11:51] Sylvain QUACK
+    il faut juste que tu remettes tes login/mdp pour PayView et PassPort
+​[11:51] Laure BROEGG
+    pour Payview aussi?
+​[11:51] Laure BROEGG
+    c'etait un token
+​[11:51] Sylvain QUACK
+    il me reste une petite chose à corriger
+​[11:52] Sylvain QUACK
+    API facturation -> token
+API normale -> email/mdp pour lire la liste des clients
+​[11:52] Laure BROEGG
+    ah ok
