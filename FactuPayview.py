@@ -620,8 +620,8 @@ def génèreFactu(année:int,mois:int):
 if __name__ == "__main__":
     locale.setlocale(locale.LC_ALL, '') #set local en Français
     setLogger()
-    année = int(sys.argv[1])
-    mois = int(sys.argv[2])
+    année = int(sys.argv[2])
+    mois = int(sys.argv[1])
     
     print("Génération de la facturation payview "+str(mois)+"-"+str(année))
     génèreFactu(année,mois)
